@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades</title>
+    <link rel="stylesheet" href="css/estiloPROP.css">
+</head>
+<body>
+    <center>
+    <h1>JavaScript<br>
+    Propriedades e Atributos de Objetos</h1>
+    <h3>Propriedades do objeto em JavaScript <br> 
+        Um objeto é uma coleção não ordenada de propriedades</h3>
+    <p>Propriedades são a parte mais importante dos objetos JavaScript.</p>
+    <p>As propriedades podem ser alteradas, adicionadas, excluídas e algumas são somente leitura.</p>
+    </center>
+    <center>
+    <h3>Acessando propriedades JavaScript</h3>
+    <p>Existem 3 maneires de sintaxe para acessar a propriedade de um objeto:</p>
+    <br>
+    <li> // objectName.property: Utilizando um "." entre o objeto e a propriedade.<br>
+        let age =  person.age;  <br><br>
+        Exemplo: <br>
+        person.firstname + " is " + person.age + " years old."; <br><br>
+            const person = {
+              firstname: "John",
+              lastname: "Doe",
+              age: 50,
+              eyecolor: "blue"
+            };
+            <br>
+            document.getElementById("demo").innerHTML = person.firstname + " is " + person.age + " years old.";
+                <Br>
+                saída: "Jonh is 50 years old."<br>
+            </li>
+        <p>Ou...</p>
+    <li> // objectName["property"]: Utiliza um "[]" entre o objeto e a propriedade.<br>
+        let age =  person["age"];  <br><br>
+        Exemplo: <br>
+        person["firstname"] + " is " + person["age"] + " years old.";</li>
+        <p>Ou...</p>
+    <li> // objectName[expression]:  Utiliza uma variavél para chamar na espressão, x em [x].<br>
+        let age =  person[x];      <br><br>
+        Exemplo: <br>
+        let x = "firstname"; <br>
+        let y = "age";       <br>
+        person[x] + " is " + person[y] + " years old.";</li>
+        <br><br><br>
+    
+    <h3>Adicionando novas propriedades.</h3>
+    <p>Também é possivél adicionar novas propriedades a um objeto já existente, simplesmete atribuindo a ele um valor.</p>
+    <br>
+    <li>person.nationality = "English"; <br>
+        const person = {
+            firstname: "John",
+            lastname: "Doe",
+            age: 50,
+            eyecolor: "blue"
+          };
+        <br>
+          person.nationality = "English";<br>
+          document.getElementById("demo").innerHTML =
+          person.firstname + " is " + person.nationality + "."; <br>
+            saída: "John is english" <br>
+        </li>
+        <br>
+        <h3>Excluindo propriedades.</h3>
+        <p>A palavra-chave delete excluí uma propriedade de um objeto.</p>
+        <li>delete person.age; <br>
+            const person = {
+                firstName: "John",
+                lastName: "Doe",
+                age: 50,
+                eyeColor: "blue"
+              };
+            <br>
+              delete person.age;<br>
+            Ou... excluir person["age"];<br><br>
+        </li>
+        <h4>Obrservação!</h4>
+        <p>A palavra-chave delete excluí tanto o valor da propriedade quanto a propriedade em si.<br>
+            Após a exclusão, a propriedade não poderá ser usada antes de ser adicionada novamente.</p><br>
+        <h3>Objetos aninhados (agrupados dentro de outro).</h3>
+        <p>Os valores de propriedades em um objeto podem ser outros objetos.<br>
+                myObj = {
+                    name:"John",
+                    age:30,<br>
+                    myCars: {
+                      car1:"Ford",
+                      car2:"BMW",
+                      car3:"Fiat"
+                    }
+                }<br><br>
+        E para acessa-los você pode usar a notação "." ou "[]".<br><br>
+        Por exemplo:<br><br>
+        myObj.myCars.car2;<br>
+        myObj.myCars["car2"];<br>
+        myObj["myCars"]["car2"];<br><br>
+        OU associando eles a uma variavél:<br><br>
+        let p1 = "myCars";<br>
+        let p2 = "car2";<br>
+        myObj[p1][p2];</p>
+        </center>
+            </body>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atributos em JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 10px;
+      display: block;
+      margin: 10px 0;
+      white-space: pre-wrap;
+      border-left: 4px solid #007acc;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #007acc;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Atributos em JavaScript</h1>
+
+  <p>No JavaScript, especialmente ao trabalhar com HTML, <strong>atributos</strong> são valores que estão associados aos elementos da página. Por exemplo: <code>href</code>, <code>src</code>, <code>alt</code>, <code>id</code>, <code>title</code>, entre outros.</p>
+
+  <p>Podemos acessar ou modificar esses atributos com os métodos:</p>
+  <ul>
+    <li><code>getAttribute("nomeDoAtributo")</code> → pega o valor atual do atributo</li>
+    <li><code>setAttribute("nomeDoAtributo", "novoValor")</code> → altera ou adiciona o atributo com o valor desejado</li>
+  </ul>
+
+  <h2>🔹 Exemplo 1: Usando <code>getAttribute()</code></h2>
+  <p>Vamos pegar o link de um elemento &lt;a&gt;:</p>
+  <code>
+    &lt;a id="meuLink" href="https://google.com"&gt;Ir para o Google&lt;/a&gt;<br><br>
+    &lt;script&gt;<br>
+    &nbsp;&nbsp;const link = document.getElementById("meuLink");<br>
+    &nbsp;&nbsp;const endereco = link.getAttribute("href");<br>
+    &nbsp;&nbsp;console.log(endereco); // Mostra: https://google.com<br>
+    &lt;/script&gt;
+  </code>
+
+  <h2>🔹 Exemplo 2: Usando <code>setAttribute()</code></h2>
+  <p>Vamos trocar a imagem e sua descrição:</p>
+  <code>
+    &lt;img id="foto" src="imagem1.jpg" alt="Imagem 1"&gt;<br><br>
+    &lt;script&gt;<br>
+    &nbsp;&nbsp;const imagem = document.getElementById("foto");<br>
+    &nbsp;&nbsp;imagem.setAttribute("src", "imagem2.jpg");<br>
+    &nbsp;&nbsp;imagem.setAttribute("alt", "Imagem trocada");<br>
+    &lt;/script&gt;
+  </code>
+
+  <a href="index.html">← Voltar para página inicial</a>
+</body>
+</html>
